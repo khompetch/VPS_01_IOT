@@ -15,9 +15,9 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_DB: oee
-      - POSTGRES_USER: admin_user
-      - POSTGRES_PASSWORD: S3cret@1234
+      - POSTGRES_DB=oee
+      - POSTGRES_USER=admin_user
+      - POSTGRES_PASSWORD=S3cret@1234
     volumes:
       - "postgres-data:/var/lib/postgresql/data"
       
@@ -28,8 +28,8 @@ services:
     ports:
       - "8888:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin_user@domain.com
-      PGADMIN_DEFAULT_PASSWORD: S3cret@1234
+      PGADMIN_DEFAULT_EMAIL=admin_user@domain.com
+      PGADMIN_DEFAULT_PASSWORD=S3cret@1234
     volumes:
       - "pgadmin-data:/var/lib/pgadmin"
     
